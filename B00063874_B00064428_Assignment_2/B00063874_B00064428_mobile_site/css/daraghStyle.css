@@ -1,0 +1,111 @@
+
+div#page1home, div#page2blog, div#page3{
+	background-color: black;
+}
+
+
+
+/***************************/
+/*   images page styling   */
+#photolist img {
+	width: 100px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-border-radius: 6px;
+}
+#photolist .ui-block-a,
+#photolist .ui-block-b,
+#photolist .ui-block-c {
+	width: 100px;
+	height: 100px;
+	box-shadow: 0 0 12px #9D4789;
+}
+#photolist.ui-grid-c {
+	margin: 0 auto;
+	background-color: black;
+}
+#showphoto {
+	background: black;
+}
+#showphoto img {
+	display: block;
+	margin: 0 auto;
+	max-width: 1024px;
+	width: 100%;
+}
+#showphoto .ui-content {
+	width: 100%;
+	padding: 0;
+}
+/********************************/
+/***  Front page styling  ***/
+img.listImg{
+	width: 80%;
+	height: auto;
+	margin-left: 1em;
+}
+
+div#welcome p{
+	color: #B3D2EF;/*blue;*/
+	font-size: 1.3em;
+	text-align: right;
+	margin-right: 1em;
+	text-shadow: none;
+}
+
+/******************************/
+/***    some blog styling   ***/
+div#showBlogEntry{
+	background-color: black;
+	color: #B3D2EF;
+	text-shadow: none;
+}
+
+
+/******************************/
+/***     header styling     ***/
+.logoImgL{
+	float: left;
+	width: 14%;
+}
+.logoImgR{
+	float: right;
+	width: 14%;
+}
+h1.logoSign{
+	width: 72%
+	display: inline;
+	float: left;
+}
+
+/***********************************/
+/***     page1 table styling     ***/
+table#page1Table{
+	border-collapse: collapse;
+}
+
+#page1Table th{
+	border-top: 3px solid blue;
+	border-bottom: 3px solid blue;
+	text-align: left;
+}
+
+#page1Table tr{
+	border-bottom: 1px solid blue;
+}
+
+#page1Table{
+	color: white;
+}
+
+/**************/
+/* info icons */
+h1.infoIcon{
+	color: yellow;
+}
+
+
+img.listImg{
+	background-color: white;
+}
+

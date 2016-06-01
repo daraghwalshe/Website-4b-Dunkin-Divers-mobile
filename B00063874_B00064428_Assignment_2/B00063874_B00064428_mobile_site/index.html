@@ -1,0 +1,445 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dunkin Divers</title>
+
+	<link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
+	<!--  jQuery mobile theme styling and structure - leave alone  -->
+	<link rel="stylesheet" href="css/daraMob42swatch.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+
+	<!--  Master CSS all our css will eventually go here - once tested - leave alone for now  -->
+	<link rel="stylesheet" href="css/mobDunkin.css" />
+
+	<!--  jQuery Scripts leave alone  -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<!--  Map Scripts leave alone  -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script type="text/javascript" src="js/mobMap.js"></script>
+
+	<!---------------------------------------------------------------------------->
+	<!--  Our temp css and js  -->
+	<script type="text/javascript" src="js/sabiJS.js"></script>
+	<link rel="stylesheet" href="css/sabiStyle.css" type="text/css" media="screen" />
+
+	<script type="text/javascript" src="js/daraghJS.js"></script>
+	<link rel="stylesheet" href="css/daraghStyle.css" type="text/css" media="screen" />
+
+</head>
+<body>
+
+<!--  ---------------------------  Home, page 1  ----------------------------  -->
+	<div id="page1home" data-role="page" data-theme="b">
+		<div data-role="header" class="header" data-position="fixed">
+				<img class="ui-btn-left logoImgL" src="images/seahorse.png">
+				<h1 class="logoSign">Dunkin Divers</h1>
+				<img class="ui-btn-right logoImgR" src="images/seahorse1.png">
+		</div> <!-- end header -->
+
+<!-- Page Content -->
+
+		<div class="content" data-theme="b">
+			<div data-role="main" class="ui-content">
+
+			<div class="ui-grid-a" data-theme="b">
+			<div class="ui-block-a">
+				<img src="images/ddLogo3.png" class="listImg" alt="Dunkin logo">
+			</div>
+
+			<div class="ui-block-b" id="welcome">
+				<p>Welcome to</br>Dunkin Divers</br>Dublins newest</br>dive club</p>
+			<!--a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a follow">Follow Us</a-->
+			</div>
+
+			</div>
+
+			<!--  info and social media buttons  -->
+			<div class="ui-grid-a butnGroup">
+				<div class="ui-block-a">
+					<a href="#infoPage" data-rel="dialog" data-transition="turn" data-role="button"><span class="fa fa-info-circle fa-lg"></span>&nbsp;About Us</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#popupMenu" data-rel="popup" data-transition="slideup" data-role="button" class=" ui-shadow">
+						<span class="fa fa-facebook"></span>ollow Us
+						<span class="fa fa-twitter"></span>
+					</a>
+				</div>
+			</div>
+
+			<div data-role="popup" id="popupMenu" data-theme="b">
+				<ul data-role="listview" data-inset="true" style="min-width:110px;">
+					<li data-role="list-divider">Like Us</li>
+					<li><a href="http://facebook.com" target="_blank"><img src="images/facebook.jpg" class="shadowEffect" title="Follow us on Facebook"></a></li>
+					<li><a href="http://twitter.com" target="_blank"><img src="images/twitter.jpg" class="shadowEffect" title="Follow us on Twitter"></a></li>
+					<li><a href="http://google.com" target="_blank"><img src="images/google.jpg" class="shadowEffect" title="Follow us on Google+"></a></li>
+				</ul>
+			</div>
+
+
+			<div data-role="collapsibleset" class="homeCollapsable">
+				<div data-role="collapsible">
+						<h3>Underwater Sport</h3>
+						<p>Scuba diving is currently the worlds fastest growing
+						sport. Here on the site you can see great images from
+						some of our members previous exploits. You can also
+						find details of all the courses we offer. We have a
+						great range with something to engage divers at all
+						levels of the sport.
+						</p>
+				</div>
+				<div data-role="collapsible">
+						<h3>Join Us</h3>
+							<p>We are a newly formed dive club located on the West pier
+								of the beautiful fishing harbour of howth. We are currently
+								looking for new members. So if you are either a salty veteran
+								of the deep or a complete novice, come on in and enjoy the site,
+								you might find just what you were looking for.
+							</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>Opening Hours</h3>
+					<p>
+						<table id="page1Table" data-theme="c">
+								<tr><th>Day</th><th>Time</th></tr>
+
+								<tr><td>Monday</td><td>9 - 5pm</td></tr>
+								<tr><td>Tuesday</td><td>9 - 5pm</td></tr>
+								<tr><td>Wednesday</td><td>8 - 1pm</td></tr>
+								<tr><td>Thursday</td><td>9 - 5pm</td></tr>
+								<tr><td>Friday</td><td>8 - 1pm</td></tr>
+								<tr><td>Saturday</td><td>9 - 5pm</td></tr>
+								<tr><td>Sunday</td><td>9 - 5pm</td></tr>
+						</table>
+					</p>
+				</div>
+			</div>
+
+			<div id="imgRotate">
+				<div class="current">
+					<img src="images/scubaImg_1.jpg" alt="dive photo">
+				</div>
+			</div><!--  /end img  -->
+		</div>
+		</div>
+<!-- --------------Footer--------------------------------------------------- -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1home" data-transition="slide" data-role="button" data-icon="home"
+							data-iconpos="left" class="ui-btn-active ui-state-persist">Home</a></li>
+
+					<li><a href="#page2blog" data-transition="slide" data-role="button" data-icon="comment" data-iconpos="left">Blog</a></li>
+					<li><a href="#page3photos" data-transition="slide" data-role="button" data-icon="camera" data-iconpos="left">Photos</a></li>
+					<li><a href="#page4videos" data-transition="slide" data-role="button" data-icon="video">Videos</a></li>
+					<li><a href="#page5Map" data-transition="slide" data-role="button" data-icon="info" data-iconpos="left">Map</a></li>
+				</ul>
+			</div><!-- end navbar -->
+		</div><!-- /end footer -->
+	</div><!-- end page -->
+
+<!--  ---------------------  page 1.a, information  -----------------------  -->
+	<div data-role="page" id="infoPage" data-theme="c" data-dialog="true" data-overlay-theme="c">
+		<div data-role="header" class="headerX" data-position="fixed">
+			<h1 class="logoSignX">Our Details</h1>
+		</div> <!-- end header -->
+
+		<!-- Page Content -->
+		<div data-role="content">
+
+			<h1 class="infoIcon"><span class="fa fa-info-circle fa-2x"></span></h1>
+			<dl>
+				<dt>Our Address</dt>
+				<dd>12 West Pier, Howth, Dublin 13</dd><hr>
+
+				<dt>Phone No.</dt>
+				<dd>01 444-123456</dd><hr>
+
+				<dt>e-mail</dt>
+				<dd>dunkindivers@yahoo.ie</dd>
+			</dl>
+			<h1 class="infoIcon"><span class="fa fa-info-circle fa-2x"></span></h1>
+
+		</div><!--  end content  -->
+	</div><!--  end info dialog page  -->
+
+<!--  --------------------------  page 2  -----------------------------  -->
+
+<!-- PAGE 2 -->
+	<div data-role="page" id="page2blog"  data-theme="b">
+				<!-- HEADER -->
+		<div data-role="header" class="header" data-position="fixed">
+				<img class="ui-btn-left logoImgL" src="images/seahorse.png">
+				<h1 class="logoSign">Dunkin Divers</h1>
+				<img class="ui-btn-right logoImgR" src="images/seahorse1.png">
+		</div> <!-- /HEADER -->
+<!-- Page Content -->
+		<div data-role="main" class="ui-content">
+			<div data-role="collapsibleset" class="homeCollapsable">
+				<div data-role="collapsible">
+					<h3>Beer</h3>
+					<p>Every Saturday in the PierHouse <br>
+						No Dancing with your Fins on!
+					</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>Diving Course</h3>
+
+					<img class="listImg" src="images/padiLogo.png" alt="padi logo" style="width:50px; height:50px; float:right">
+					<ul id="diveLists">
+						<li><span class="fa fa-anchor fa"></span>&nbsp;Starter Courses
+							<ul class="innerList">
+								<li>Bubble Babies</li>
+								<li>Discover Scuba</li>
+								<li>Open Water Diver</li>
+								<li>&nbsp;</li><li>&nbsp;</li>
+							</ul>
+						</li>
+						<li><span class="fa fa-anchor fa"></span>&nbsp;Advanced
+							<ul class="innerList">
+								<li>Advanced</li>
+								<li>Rescue Diver</li>
+								<li>Night Diver</li>
+								<li>Underwater Navigator</li>
+								<li>Search and Rescue</li>
+							</ul>
+						</li>
+						<li><span class="fa fa-anchor fa"></span>&nbsp;Technical Courses
+							<ul class="innerList">
+								<li>Deep Diver</li>
+								<li>Wreck Diver</li>
+								<li>Nitrous Mix.</li>
+								<li>Drysuit Diver</li>
+							</ul>
+						</li>
+
+					</ul>
+					<p class="noWrap">
+						<span class="fa fa-graduation-cap fa"></span>&nbsp;All our instructors are fully qualified Divemasters with a minimum of five years<br> experience in all aspects of training including satety and first aid.
+					</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>Newsflash</h3>
+					<p>Come in and check out our new walk-in shop here on Howth harbour.
+						We have a great range of equipment, including some newly serviced
+						second hand gear. Check out our opening times on this page.
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<a href="#blog" data-icon="comment" data-transition="slide" data-role="button" data-iconpos="left">Blog</a>
+			</div>
+
+			<div id="page2Img">
+				<img src="images/scubaImg_3.jpg" alt="dive photo" width=100%; height=100%; class="rotate">
+			</div>
+		</div>
+<!-- --------------Footer--------------------------------------------------- -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1home" data-transition="slide" data-role="button" data-icon="home" data-iconpos="left">Home</a></li>
+					<li><a href="#page2blog" data-transition="slide" data-role="button" data-icon="comment" data-iconpos="left"  class="ui-btn-active ui-state-persist">Blog</a></li>
+					<li><a href="#page3photos" data-transition="slide" data-role="button" data-icon="camera" data-iconpos="left">Photos</a></li>
+					<li><a href="#page4videos" data-transition="slide" data-role="button" data-icon="video">Videos</a></li>
+					<li><a href="#page5Map" data-transition="slide" data-role="button" data-icon="info" data-iconpos="left">Map</a></li>
+				</ul>
+			</div><!-- end navbar -->
+		</div><!-- /end footer -->
+	</div> <!-- Page 2 END -->
+
+<!--  ---------------------  page 2.a, blogpost summary  -----------------------  -->
+
+	<div data-role="page" id="blog" data-theme="b">
+		<!-- HEADER -->
+		<div data-role="header" class="header" data-position="fixed">
+				<img class="ui-btn-left logoImgL" src="images/seahorse.png">
+				<h1 class="logoSign">Dunkin Divers</h1>
+				<img class="ui-btn-right logoImgR" src="images/seahorse1.png">
+		</div> <!-- end header -->
+
+		<!-- Page Content -->
+		<div data-role="main" class="ui-content" id="page1Main">
+			<h3> Welcome to Dunkin Divers, Dublins newest dive club.</h3>
+
+			<div data-role="content" id="postlist">
+		</div><!-- end content -->
+
+		<!--  **************  Slideshow is not implemented yet **************  -->
+			<div id="imgRotate">
+				<div class="current">
+					<img src="images/scubaImg_1.jpg" alt="dive photo">
+				</div>
+			</div><!-- end imgRotate -->
+		</div><!-- end ui-content -->
+	<!-- FOOTER -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a href="#page2blog" data-transition="slide" data-role="button" data-icon="comment">Back To Blog Page</a>
+					</li>
+				</ul>
+			</div>
+		</div> 	<!-- /FOOTER -->
+
+	</div> <!-- /Page Blog END -->
+
+<!--  ---------------------  page 2.b, blogpost display  -----------------------  -->
+
+	<div id="blogpost" data-role="page" data-theme="b">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#blog" data-icon="back" data-transition="slide" data-iconpos="notext" data-direction="reverse">Videos</a>
+			<h1>Post</h1>
+		</div><!-- header-->
+
+		<div data-role="content" id="showBlogEntry">
+			<div id="mypost"></div>
+		</div><!-- end content -->
+
+	</div><!-- / page blogpost -->
+
+<!--  ---------------------------  page 3  ----------------------------  -->
+
+	<div id="page3photos" data-role="page" data-theme="b">
+		<div data-role="header" class="header" data-position="fixed">
+				<img class="ui-btn-left logoImgL" src="images/seahorse.png">
+				<h1 class="logoSign">Dunkin Divers</h1>
+				<img class="ui-btn-right logoImgR" src="images/seahorse1.png">
+		</div> <!-- end header -->
+
+		<div data-role-"content" data-theme="b">
+			<div class="ui-grid-c" id="photolist">
+			</div><!-- grid -->
+		</div><!-- content -->
+<!-- --------------Footer--------------------------------------------------- -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1home" data-transition="slide" data-role="button" data-icon="home" data-iconpos="left">Home</a></li>
+					<li><a href="#page2blog" data-transition="slide" data-role="button" data-icon="comment" data-iconpos="left">Blog</a></li>
+					<li><a href="#page3photos" data-transition="slide" data-role="button" data-icon="camera" data-iconpos="left" class="ui-btn-active ui-state-persist">Photos</a></li>
+					<li><a href="#page4videos" data-transition="slide" data-role="button" data-icon="video">Videos</a></li>
+					<li><a href="#page5Map" data-transition="slide" data-role="button" data-icon="info" data-iconpos="left">Map</a></li>
+				</ul>
+			</div><!-- end navbar -->
+		</div><!-- /end footer -->
+	</div><!-- end page -->
+
+<!--  ------------------  page 3.a, photo display  --------------------  -->
+	<div data-role="page" id="showphoto">
+		<div data-role="header" data-position="fixed" data-theme="c">
+			<a href="#page3photos" data-transition="fade" data-icon="back" data-iconpos="notext">Photos</a>
+			<h1>Photos</h1>
+		</div><!-- header -->
+
+		<div data-role="content">
+			<div id="myphoto"></div>
+		</div><!-- content -->
+	</div><!-- page -->
+
+<!--  ---------------------------  page 4  ----------------------------  -->
+
+	<div id="page4videos" data-role="page" data-theme="b">
+		<div data-role="header" class="header" data-position="fixed">
+				<img class="ui-btn-left logoImgL" src="images/seahorse.png">
+				<h1 class="logoSign">Dunkin Divers</h1>
+				<img class="ui-btn-right logoImgR" src="images/seahorse1.png">
+		</div> <!-- end header -->
+<!-- Page Content -->
+		<div data-role="content" id="videoContent" data-theme="e">
+			<div id="videoList">
+			</div> <!-- grid -->
+		</div>
+<script src="http://gdata.youtube.com/feeds/users/DScubaClub/uploads?alt=json-in-script&max-results=30&callback=listVideos" type="text/javascript"></script>
+<!-- --------------Footer--------------------------------------------------- -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1home" data-transition="slide" data-role="button" data-icon="home" data-iconpos="left">Home</a></li>
+					<li><a href="#page2blog" data-transition="slide" data-role="button" data-icon="comment" data-iconpos="left">Blog</a></li>
+					<li><a href="#page3photos" data-transition="slide" data-role="button" data-icon="camera" data-iconpos="left">Photos</a></li>
+					<li><a href="#page4videos" data-transition="slide" data-role="button" data-icon="video" class="ui-btn-active ui-state-persist">Videos</a></li>
+					<li><a href="#page5Map" data-transition="slide" data-role="button" data-icon="info" data-iconpos="left">Map</a></li>
+				</ul>
+			</div><!-- end navbar -->
+		</div><!-- /end footer -->
+	</div><!-- end page -->
+
+<!--  ------------------  page 4.a, play video  --------------------  -->
+	<div data-role="page" id="videoPlay"  data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="c">
+			<a href="#page4videos" data-transition="fade" data-icon="back" data-iconpos="notext">Photos</a>
+			<h1>Videos</h1>
+		</div><!-- header -->
+
+		<div data-role="content">
+			<div id="playground"></div>
+		</div><!-- content -->
+	</div><!-- page -->
+<!--  --------------------------  page 5 Location  -----------------------------  -->
+
+	<div id="page5Map" data-role="page" data-theme="b">
+		<div data-role="header" class="header" data-position="fixed">
+				<img class="ui-btn-left logoImgL" src="images/seahorse.png">
+				<h1 class="logoSign">Dunkin Divers</h1>
+				<img class="ui-btn-right logoImgR" src="images/seahorse1.png">
+		</div> <!-- end header -->
+
+		<div id="locationContent" class="content">
+
+			  <div id="mapBut">
+			  	<button id="button">Directions</button>
+			  </div>
+
+			  <div id="mapInp">
+			  	<input id="startLoc" size="30" value="" placeholder="Enter start location" class="ui-input-a">
+			  </div>
+
+			<div id="map-canvas"></div>
+			<div id="directionsPanel">
+				<p id="totDist">Total Distance: <span id="total"></span></p>
+			</div>
+		</div>
+<!-- --------------Footer--------------------------------------------------- -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1home" data-transition="slide" data-role="button" data-icon="home" data-iconpos="left">Home</a></li>
+					<li><a href="#page2blog" data-transition="slide" data-role="button" data-icon="comment" data-iconpos="left">Blog</a></li>
+					<li><a href="#page3photos" data-transition="slide" data-role="button" data-icon="camera" data-iconpos="left">Photos</a></li>
+					<li><a href="#page4videos" data-transition="slide" data-role="button" data-icon="video">Videos</a></li>
+					<li><a href="#page5Map" data-transition="slide" data-role="button" data-icon="info" data-iconpos="left" class="ui-btn-active ui-state-persist">Map</a></li>
+				</ul>
+			</div><!-- end navbar -->
+		</div><!-- /end footer -->
+	</div><!-- end page -->
+
+<!--  -----------------------------  End Pages --------------------------  -->
+
+<script src="http://sabi11.co/?json=recentstories&callback=listPosts" type="text/javascript"></script>
+
+
+	<script src="http://api.flickr.com/services/feeds/photos_public.gne
+	?id=129522336@N07&format=json&tags=dunkinPhoto" type="text/javascript"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

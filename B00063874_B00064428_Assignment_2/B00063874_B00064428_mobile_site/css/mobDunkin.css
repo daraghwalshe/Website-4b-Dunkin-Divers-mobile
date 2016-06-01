@@ -1,0 +1,60 @@
+
+
+/********************************/
+/*** Header Styling ***/
+
+/* Theme override */
+.ui-page-theme-b .ui-bar-inherit{
+	background: #333333 url("images/ui-bg_diagonals-thick_15_0b3e6f_40x40.png") 50% 50% repeat;
+}
+
+h1{
+	text-shadow: 3px 5px #000;
+}
+
+
+/********************************/
+/*** Map Page Styling  ***/
+#map-canvas{
+	width: 100%;
+	height: 70%;
+	height: 600px;
+	float: left;
+}
+
+#directionsPanel{
+	width: 100%;
+	/*height: 30%;*/
+	float: left;
+	overflow: auto;
+}
+
+div#mapBut{
+	width: 30%;
+	float: left;
+}
+div#mapBut button{
+	padding: 0.45em;
+}
+div#mapInp{
+	width: 70%;
+	float: left;
+}
+
+.mapPic{
+	width: 10em;
+}
+
+div#contentPop{
+	width: 50%;
+	height: 50%;
+}
+/********************************/
+/***  ***/
+
+/********************************/
+/***  ***/
+
+
+
+

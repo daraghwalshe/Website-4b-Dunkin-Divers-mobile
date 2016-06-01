@@ -1,0 +1,6 @@
+httpsgithub.comFortAwesomeFont-Awesome
+
+copy Font Awsome directory into project
+
+put in head of HTML:
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
